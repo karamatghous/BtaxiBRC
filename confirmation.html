@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Taxi Booking Page</title>
+    <link rel="stylesheet" href="./css/confirmation.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar Section -->
+      <div class="sidebar">
+        <h3>Results</h3>
+        <div class="item">
+          <div class="icon-text">
+            <span>🗺️</span>
+            <div>
+              <p>Pick-up location</p>
+              <strong id="pickup"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-text">
+            <span>🗺️</span>
+            <div>
+              <p>Drop-off location</p>
+              <strong id="dropoff"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-text">
+            <span>📅</span>
+            <div>
+              <p>Date</p>
+              <strong id="pickupDate"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-text">
+            <span>⏰</span>
+            <div>
+              <p>Time</p>
+              <strong id="pickupTime"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-text">
+            <span>📅</span>
+            <div>
+              <p>Return Date</p>
+              <strong id="returnDate"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-text">
+            <span>⏰</span>
+            <div>
+              <p>Return Arrival Time</p>
+              <strong id="returnArrivalTime"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-text">
+            <span>⏰</span>
+            <div>
+              <p>Return Departure Time</p>
+              <strong id="returnDepartureTime"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-text">
+            <span>👤</span>
+            <div>
+              <p>Passengers</p>
+              <strong id="passengers"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-text">
+            <span>👜</span>
+            <div>
+              <p>Bags</p>
+              <strong id="bags"></strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Section -->
+      <div class="main-content">
+        <!-- Trusted, secure, and convenient section -->
+        <div class="header">
+          <h2>Trusted, secure and convenient</h2>
+        </div>
+
+        <!-- Taxi Info Section -->
+        <div class="taxi-info">
+          <h3>Standard-size taxi</h3>
+          <p>Perfect for solo travellers, couples, and small families.</p>
+        </div>
+
+        <!-- Passenger and Bag Info -->
+        <div class="taxi-details">
+          <div>
+            <p><strong>Up to 1 passengers</strong></p>
+          </div>
+          <div>
+            <p><strong>Up to 1 medium bags</strong></p>
+          </div>
+        </div>
+
+        <!-- Passenger Details Form -->
+        <div class="passenger-details">
+          <h4>Passenger details</h4>
+          <form id="booking-form">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <select id="title" name="title">
+                <option>Mr</option>
+                <option>Ms</option>
+                <option>Mrs</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Passenger first name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Passenger last name"
+              />
+            </div>
+            <div class="form-group full-width">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Passenger email address"
+              />
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile Number</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="+34 123 456 896"
+              />
+            </div>
+            <div class="form-group">
+              <label for="flight">Arrival Flight Number</label>
+              <input
+                type="text"
+                id="flight"
+                name="flight"
+                placeholder="Arrival Flight number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="airline">Arrival Airline</label>
+              <input
+                type="text"
+                id="airline"
+                name="airline"
+                placeholder="Arrival Airline"
+              />
+            </div>
+            <div class="form-group">
+              <label for="arrivalTime">Arrival Time</label>
+              <select id="arrivalTime" name="arrivalTime">
+                <option value="00:00">00:00</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+                <option value="06:00 PM">06:00 PM</option>
+                <option value="07:00 PM">07:00 PM</option>
+                <option value="08:00 PM">08:00 PM</option>
+                <option value="09:00 PM">09:00 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+                <option value="11:00 PM">11:00 PM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="01:00 AM">01:00 AM</option>
+                <option value="02:00 AM">02:00 AM</option>
+                <option value="03:00 AM">03:00 AM</option>
+                <option value="04:00 AM">04:00 AM</option>
+                <option value="05:00 AM">05:00 AM</option>
+                <option value="06:00 AM">06:00 AM</option>
+                <option value="07:00 AM">07:00 AM</option>
+                <option value="08:00 AM">08:00 AM</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 AM">12:00 AM</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="note">Add a note for the driver:</label>
+              <textarea
+                id="note"
+                name="note"
+                placeholder="Things like 'I need a child seat', 'Please hold a sign that says...'"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Booking Summary Section -->
+      <div class="booking-summary">
+        <div class="price">
+          <h3>One-way trip</h3>
+          <p>€ 50</p>
+        </div>
+        <button type="submit" form="booking-form">Book Now</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const data = JSON.parse(localStorage.getItem("formData"));
+    const pickup = document.getElementById("pickup");
+    const dropoff = document.getElementById("dropoff");
+    const pickupDate = document.getElementById("pickupDate");
+    const pickupTime = document.getElementById("pickupTime");
+    const passengers = document.getElementById("passengers");
+    const bags = document.getElementById("bags");
+    const returnDate = document.getElementById("returnDate");
+    const returnArrivalTime = document.getElementById("returnArrivalTime");
+    const returnDepartureTime = document.getElementById("returnDepartureTime");
+
+    // Populate stored data
+    if (data) {
+      pickup.innerText = data.pickup || "";
+      dropoff.innerText = data.dropoff || "";
+      pickupDate.innerText = data.pickupDate || "";
+      pickupTime.innerText = data.pickupTime || "";
+      passengers.innerText = data.passengers || "";
+      bags.innerText = data.bags || "";
+      returnDate.innerText = data.returnDate || "";
+      returnArrivalTime.innerText = data.returnArrivalTime || "";
+      returnDepartureTime.innerText = data.returnDepartureTime || "";
+    }
+
+    // Form submission
+    const form = document.getElementById("booking-form");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Gather form values
+      const formValues = {
+        title: form.elements?.title?.value,
+        firstName: form.elements?.firstName?.value,
+        lastName: form.elements?.lastName?.value,
+        email: form.elements?.email?.value,
+        mobile: form.elements?.mobile?.value,
+        flight: form.elements?.flight?.value,
+        airline: form.elements?.airline?.value,
+        arrivalTime: form.elements?.arrivalTime?.value,
+        note: form.elements?.note?.value,
+        ...data, // Include data from localStorage
+      };
+
+      // Send form data via POST to mail.php
+      fetch("https:api.following.ae/api/v1/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json", // Make sure the server understands JSON responses
+        },
+        mode: "cors", // Ensure CORS is enabled
+        body: JSON.stringify(formValues),
+      })
+        .then((result) => {
+          console.log(result);
+          localStorage.removeItem("formData");
+          alert("Your booking details have been submitted successfully.");
+          window.location.href = "/";
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("There was a problem submitting your booking.");
+        });
+    });
+  </script>
+</html>
